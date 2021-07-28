@@ -26,4 +26,8 @@ export class SearchDataInfoComponent implements OnInit {
     this.item= this.items?.length ? this.items.filter(item => item.id==this.route.snapshot.params.id)[0] : {};
   }
 
+  goBack() {
+    window.history.back();
+  }
+
 }

@@ -1,42 +1,39 @@
-<section class="mt-4">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 col-md-4">
-        <img [src]="item.owner.avatar_url" class="mr-3 rounded-circle img-fluid">
-      </div>
-      <div class="col-12 col-md-8 pt-4 text-left">
-        <h5 class="mt-0">{{item.full_name}}</h5>
+<div class="micards">
+<mat-card cols=3>
+  <img [src]="item.owner.avatar_url">
+  <mat-card-content>
+    <mat-card-title>
+      {{item.full_name}}
+    </mat-card-title>
+    <p>
+      <span class="text-info">Description: </span>
+      {{item.description}}
+    </p>
+    <p>
+      <span class="text-info">Size: </span>
+      {{item.size}}
+    </p>
 
-        <p>
-          <span class="text-info">Description: </span>
-          {{item.description}}
-        </p>
+    <p>
+      <span class="text-info">Stargazers Count: </span>
+      {{item.stargazers_count}}
+    </p>
 
-        <p>
-          <span class="text-info">Stargazers Count: </span>
-          {{item.stargazers_count}}
-        </p>
+    <p>
+      <span class="text-info">Fork Counts: </span>
+      {{item.forks_counts? item.forks_counts:'--'}}
+    </p>
 
-        <p>
-          <span class="text-info">Fork Counts: </span>
-          {{item.forks_counts? item.forks_counts:'--'}}
-        </p>
+    <p>
+      <span class="text-info">Language:</span>
+      {{item.language}}
+    </p>
 
-        <p>
-          <span class="text-info">Size: </span>
-          {{item.size}}
-        </p>
+  </mat-card-content>
 
-        <p>
-          <span class="text-info">Language:</span>
-          {{item.language}}
-        </p>
-        <a class="btn btn-primary text-white mr-3" [href]="item.clone_url"> Go to this repoistory </a>
-        <button type="button" class="btn btn-secondary" onclick=window.history.back();>Back</button>
-
-      </div>
-    </div>
-  </div>
-
-
-</section>
+  <mat-card-actions>
+       <a mat-button [href]="item.clone_url">Go to this repoistory</a>
+      <button mat-button color="primary" (click)="goBack()">Back</button>
+  </mat-card-actions>
+</mat-card>
+</div>
