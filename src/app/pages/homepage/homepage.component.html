@@ -1,10 +1,13 @@
 <mat-toolbar>
   <span class="fill-remaining-space"></span>
-  <span>Welcome to Github Search</span>
+  <span>Please make your search to Github data</span>
   <span class="fill-remaining-space"></span>
 </mat-toolbar>
 
 <app-search-bar></app-search-bar>
+
 <p *ngIf="loading">Loading ...</p>
+
 <p *ngIf="error">There is some error !!</p>
+
 <app-search-data-list class="list"></app-search-data-list>
