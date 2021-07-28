@@ -1,0 +1,6 @@
+<section (click)="showItemDetails(item.id)" class="item">
+  <img class="img-fluid w-100" [src]="item.owner.avatar_url">
+  <h3 class="my-2">{{item.full_name}}</h3>
+  <p class="font-weight-lighter">{{item.description}}</p>
+  <p>{{item.stargazers_count}}</p>
+</section>

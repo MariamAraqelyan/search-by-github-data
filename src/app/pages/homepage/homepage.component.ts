@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { select, Store } from '@ngrx/store';
+import * as searchReducers from '../../stores/reducers/index';
+import {selectIsloading , selectError} from '../../stores/reducers'
 
 @Component({
   selector: 'app-homepage',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomepageComponent implements OnInit {
 
-  constructor() { }
+  public loading : Boolean = false;
+  public error : string = '';
 
-  ngOnInit(): void {
+  constructor(private store: Store<searchReducers.State>) {
+    this.store.pipe(select(selectIsloading)).subscribe(isLoading => {
+        this.loading = isLoading;
+      });
+
+    this.store.pipe(select(selectError)).subscribe(error => {
+        this.error = error;
+      });
   }
+
+  ngOnInit(): void {}
 
 }

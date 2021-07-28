@@ -1,1 +1,5 @@
-<p>homepage works!</p>
+<h1 class="my-3">Welcome to Github Search</h1>
+<app-search-bar></app-search-bar>
+<p *ngIf="loading">Loading ...</p>
+<p *ngIf="error">There is some error !!</p>
+<app-search-data-list class="list"></app-search-data-list>

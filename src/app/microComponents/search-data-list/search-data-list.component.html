@@ -1,0 +1,13 @@
+<div class="container mt-2">
+  <div class="row">
+
+    <ng-container *ngIf="items">
+      <p *ngIf="!items.length">No Items to show</p>
+    </ng-container>
+
+    <div class="col-md-4 col-sm-6 col-12 p-3" *ngFor="let item of items">
+      <app-search-data-item [item]="item"></app-search-data-item>
+    </div>
+
+  </div>
+</div>
