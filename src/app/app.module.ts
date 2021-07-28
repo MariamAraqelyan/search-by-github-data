@@ -15,10 +15,8 @@ import { SearchDataListComponent } from './microComponents/search-data-list/sear
 import { SearchDataItemComponent } from './microComponents/search-data-item/search-data-item.component';
 import { SearchDataInfoComponent } from './microComponents/search-data-info/search-data-info.component';
 
-import {MatFormFieldModule} from "@angular/material/form-field";
-import {MatInputModule} from "@angular/material/input";
-
 import {HomepageComponent} from "./pages/homepage/homepage.component";
+import {MaterialModule} from "./shared/material.module";
 
 
 @NgModule({
@@ -34,9 +32,7 @@ import {HomepageComponent} from "./pages/homepage/homepage.component";
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    MatFormFieldModule,
-    MatInputModule,
-
+    MaterialModule,
     StoreModule.forRoot(reducers, {
       metaReducers,
       runtimeChecks: {
