@@ -17,6 +17,7 @@ import { SearchDataInfoComponent } from './microComponents/search-data-info/sear
 
 import {HomepageComponent} from "./pages/homepage/homepage.component";
 import {MaterialModule} from "./shared/material.module";
+import {MatCardModule} from "@angular/material/card";
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import {MaterialModule} from "./shared/material.module";
     }),
     EffectsModule.forFeature([SearchEffects]),
     EffectsModule.forRoot([SearchEffects]),
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -11,3 +11,16 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   flex: 1 1 auto;
 }
 
+.micards{
+  width: 100%;
+  padding: 5%;
+}
+
+.full-size {
+  width: 100%;
+  height: 100%;
+}
+
+.example-card{
+  background-color:rgba(245, 245, 220, 0.705);
+}

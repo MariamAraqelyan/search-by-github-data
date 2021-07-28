@@ -1,13 +1,13 @@
-<div class="container mt-2">
-  <div class="row">
+<div class="micards">
+    <mat-grid-list cols=4 gutterSize="2%">
+      <ng-container *ngIf="items">
+        <p *ngIf="!items.length">No Items to show</p>
+      </ng-container>
 
-    <ng-container *ngIf="items">
-      <p *ngIf="!items.length">No Items to show</p>
-    </ng-container>
+      <mat-grid-tile *ngFor="let item of items">
+          <app-search-data-item [item]="item"></app-search-data-item>
+      </mat-grid-tile>
 
-    <div class="col-md-4 col-sm-6 col-12 p-3" *ngFor="let item of items">
-      <app-search-data-item [item]="item"></app-search-data-item>
-    </div>
+    </mat-grid-list>
 
-  </div>
 </div>
